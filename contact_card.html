@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Card</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+      $(document).ready(function () {
+
+
+
+        $('button').click(function () {
+          var first_name = $('#first').val();
+          var last_name = $('#last').val();
+
+          $('.right').append("<div id='box'><h3>" + first_name + " " + last_name + "</h3><br><h5>Click for description!</h5></div>");
+
+        })
+
+        $(document).on('click', '#box', function () {
+          $(this).html("<div><p>" + $('#desc').val() + "</p></div>")
+        })
+
+      })
+
+    </script>
+    <style media="screen">
+      .left {
+        width: 48%;
+        height: 1000px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .right {
+        width: 48%;
+        height: 1000px;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      #box {
+        outline: 1px solid black;
+        width: 75%;
+        height: 100px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <h1>First Name: <input id="first"></h1>
+      <h1>Last Name: <input id="last" type="text" name="" value=""></h1>
+      <h1>Description:</h1><br>
+      <input id="desc" style="width: 50%; height: 200px; margin-bottom: 30px;"><br>
+      <button type="button" name="button">Add User</button>
+    </div>
+    <div class="right">
+      <div class="box">
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hover In Hover Out</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+
+      $('#0').hover(function () {
+        $(this).attr("src", "suit.jpg");
+      }, function (){
+        $(this).attr("src", "suit-1722706_640.png");
+      });
+
+      $('#1').hover(function () {
+        $(this).attr("src", "man-1163521_640.jpg");
+      }, function (){
+        $(this).attr("src", "suit-158820_640.png");
+      });
+
+      $('#2').hover(function () {
+        $(this).attr("src", "22.png");
+      }, function (){
+        $(this).attr("src", "11.png");
+      });
+
+      $('#3').hover(function () {
+        $(this).attr("src", "manga-613945_640.png");
+      }, function (){
+        $(this).attr("src", "son-in-law-636021_640.jpg");
+      });
+
+
+    })
+
+    </script>
+
+    <style media="screen">
+      img {
+        width: 150px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <img id="0" src="suit-1722706_640.png" alt="">
+    <img id="1" src="suit-158820_640.png" alt="">
+    <img id="2" src="11.png" alt="">
+    <img id="3" src="son-in-law-636021_640.jpg" alt="">
+
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+
+      $(document).on('click', 'button', function () {
+
+        var first = $('#0').val();
+        var last = $('#1').val();
+        var email = $('#2').val();
+        var contact = $('#3').val();
+
+        $('#users').append('<td id="first">' + first + '</td>');
+        $('#users').append('<td id="last">' + last + '</td>');
+        $('#users').append('<td id="last">' + email + '</td>');
+        $('#users').append('<td id="last">' + contact + '</td>');
+        $('#users').after('<tr id="users"></tr>');
+      })
+
+    })
+
+    </script>
+    <style media="screen">
+      #table {
+        outline: 1px solid grey;
+        display: inline-block;
+        margin: 0px 20px 0px 10px;
+        width: 350px;
+      }
+
+      th {
+        border-bottom: 1px solid black;
+
+      }
+
+      #table_content {
+        display: inline-block;
+      }
+
+      .dynamic_content {
+        width: 630px;
+        height: 30px;
+        outline: 1px dotted red;
+      }
+
+      .dynamic_data {
+        width: 150px;
+        height: 29px;
+        outline: 1px solid yellow;
+        display: inline-block;
+      }
+
+      h1 {
+        margin-top: 40px;
+      }
+
+      .input {
+        border-top: 2px solid black;
+        width: 400px;
+        height: 400px;
+        text-align: right;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+    </style>
+  </head>
+  <body>
+
+
+      <table id="table">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email Address</th>
+          <th>Contact #</th>
+        </tr>
+        <tr id="users">
+
+        </tr>
+      </table>
+
+
+
+
+    <h1>Add User</h1>
+    <div class="input">
+      <ul>
+        <li>First Name: <input id="0" type="text" name="" value=""></li>
+        <li>Last Name: <input id="1" type="text" name="" value=""></li>
+        <li>Email Address: <input id="2" type="text" name="" value=""></li>
+        <li>Contact #: <input id="3" type="text" name="" value=""></li>
+      </ul>
+      <button type="button" name="button">Add User</button>
+    </div>
+
+
+  </body>
+</html>

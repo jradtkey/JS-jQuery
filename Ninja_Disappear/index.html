@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing Ninja</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+      $(document).ready(function () {
+
+        $('#show_ninjas').click(function () {
+          $('img').show();
+        })
+
+        $('img').click(function () {
+          $(this).fadeOut();
+        })
+
+      })
+
+    </script>
+    <style media="screen">
+      body {
+        background-color: #fff69e;
+      }
+
+      .ninjas {
+        width: 800px;
+      }
+
+      .ninjas img {
+        width: 220px;
+        height: 134px;
+        margin: 20px;
+        outline: 2px solid #0082ad;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      }
+
+      button {
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 6px;
+        color: #0082ad;
+        border: 2px solid #0082ad;
+        width: 120px;
+        height: 50px;
+        text-align: center;
+        margin-left: 335px;
+        font-size: 30px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6)
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <ol>
+      <li><h1>Click a ninja to make it disappear.</h1></li>
+      <li><h1>Click the restore button to bring the ninjas back.</h1></li>
+    </ol>
+
+    <div class="ninjas">
+      <img src="ninja-153354_640.png" alt="">
+      <img src="ninja-153354_640.png" alt="">
+      <img src="ninja-153354_640.png" alt="">
+      <img src="ninja-153354_640.png" alt="">
+      <img src="ninja-153354_640.png" alt="">
+      <img src="ninja-153354_640.png" alt="">
+      <img src="ninja-153354_640.png" alt="">
+      <img src="ninja-153354_640.png" alt="">
+      <img src="ninja-153354_640.png" alt="">
+    </div>
+    <button id="show_ninjas" type="button" name="button">Restore</button>
+
+
+  </body>
+</html>
